@@ -1,0 +1,10 @@
+SELECT ID 
+FROM Tech 
+WHERE Techn IN ('DS', 'Tableau', 'Python', 'SQL')
+GROUP BY ID 
+HAVING COUNT(DISTINCT Techn) = 4;
+
+SELECT pi.Pr_Id 
+FROM Product_Info pi 
+LEFT JOIN Likes l ON pi.Pr_Id = l.Pr_Id 
+WHERE l.Pr_Id IS NULL;
